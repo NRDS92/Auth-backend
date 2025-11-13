@@ -9,8 +9,9 @@ import authRoutes from "./routes/auth.route.js";
 
 const app = express()
 const PORT = process.env.PORT || 4000
+const allowedOrigins = [process.env.CLIENT_URL || "https://auth-frontend-jurb.vercel.app/"]
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
     credentials: true,
 }))
 app.use(express.json())
