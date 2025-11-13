@@ -9,7 +9,11 @@ import authRoutes from "./routes/auth.route.js";
 
 const app = express()
 const PORT = process.env.PORT || 4000
-const allowedOrigins = ["https://auth-frontend-8k2b303ha-ndrss-projects.vercel.app", "http://localhost:5173"]
+const allowedOrigins = [
+  "https://auth-frontend-wine.vercel.app",
+  "https://auth-frontend-8k2b303ha-ndrss-projects.vercel.app",
+  "http://localhost:5173"
+];
 app.use(cors({
     origin: allowedOrigins,
     credentials: true,
